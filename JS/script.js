@@ -18,7 +18,7 @@ const resortsData = [
   }
 ]
 
-// in Km
+// ------ Function to get Distance in Km
 function getDistance(lat1, lon1, lat2, lon2, unit) {
         var radlat1 = Math.PI * lat1/180
         var radlat2 = Math.PI * lat2/180
@@ -43,16 +43,12 @@ const reset = document.querySelector('#reset')
 
 trigger.addEventListener('click', () => {
     const resort = resortsData[1]
-    
-    answer.innerText = 'Loading ...'
+    answer.innerText = 'Loading ...';
     
     navigator.geolocation.getCurrentPosition((usersPosition) => {
     // answer.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`
-    
-    const distance = getDistance(usersPosition.coords.latitude, usersPosition.coords.longitude, resort.lat, resort.long)
-    
+    const distance = getDistance(usersPosition.coords.latitude, usersPosition.coords.longitude, resort.lat, resort.long);
     answer.innerText = distance
-    
     // console.log(distance)
   });
 })
