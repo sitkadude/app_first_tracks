@@ -1,6 +1,14 @@
 
 
 body {
-    padding: 5rem;
-    margin: 10rem;
+   
   }
+
+footer {
+    padding-top: 10rem;
+}
+
+.finder {
+    padding: 5rem;
+    margin: 5rem;
+}
